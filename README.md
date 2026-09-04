@@ -10,6 +10,12 @@
 
 Bounty Hunter is a single-user workbench modeled on tools you already know — the project + tooling layout of Burp Suite, the New / Open / Save database model of Binary Ninja. You define a **Target** (scope, platform, authorization), assign a provider, model, and reasoning level per role, and then a graph of nine specialized agents maps the attack surface, runs one Solver per slice, escalates through an Oracle strategist loop, and drafts a platform report — all behind hard authorization, scope, and evidence gates.
 
+<p align="center">
+  <img src="docs/images/workspace.png" alt="The Bounty Hunter workspace after one hunt cycle: populated target tree, dashboard stat strip, multi-provider agent roster, Oracle directives, and a live event log." width="100%">
+  <br>
+  <sub>The workspace after one hunt cycle on a <b>synthetic demo</b> Target — populated target tree, dashboard, multi-provider agent roster, Oracle directives, findings across every gate, and a live event log streaming the agents' work. <b>No real assets were tested.</b></sub>
+</p>
+
 > [!WARNING]
 > **This is not a scanner you point at random hosts.** Authorization is required to create a Target, every Solver is re-checked against scope before it runs, and the Reporter **never auto-submits**. Use it only on programs and assets you are explicitly permitted to test. See [`docs/SAFETY.md`](docs/SAFETY.md).
 
